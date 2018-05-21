@@ -1,0 +1,32 @@
+import org.scalatest._
+
+
+class RomanNumeralsSpec extends WordSpec with MustMatchers {
+
+  "RomanNumerals" must {
+
+        "return correct arabic number when the Roman Numeral is input" in {
+          RomanNumerals.convert("I") mustEqual 1
+        }
+
+        "return a list of separate chars from a string" in {
+
+          RomanNumerals.convertLonger("II") mustEqual List('I', 'I')
+        }
+        "return a list of separate chars from a string of 3 chars" in {
+
+          RomanNumerals.convertLonger("III") mustEqual List('I', 'I','I')
+        }
+    //    "return correct arabic number when the Roman number has 2 chars and the seconds char has a lower of equal value than the first" in {
+    //      RomanNumerals.convertLongerNumber
+        }
+    "return a list of Arabic nums when input is a String of Roman Numerals" in {
+      RomanNumerals.stringToListInt("II") mustEqual List(1, 1)
+    }
+  "return a list of Arabic nums when input is a String of 3 Roman Numerals" in {
+    RomanNumerals.stringToListInt("III") mustEqual List(1,1,1)
+  }
+//  "return a string of Roman numerals as an Int" in {
+//    RomanNumerals.toArabic("II") mustEqual 2
+//  }
+}
