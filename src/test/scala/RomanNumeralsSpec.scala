@@ -36,4 +36,19 @@ class RomanNumeralsSpec extends WordSpec with MustMatchers {
     RomanNumerals.romanToInt("XVI") mustEqual 16
   }
 
+  "return a string of 3 Roman numerals as an Int" in {
+    RomanNumerals.romanToInt2("III") mustEqual 3
+  }
+  "return a string of 3new Roman numerals as an Int" in {
+    RomanNumerals.romanToInt2("XVI") mustEqual 16
+  }
+  "return a string of 3newer Roman numerals as an Int" in {
+    RomanNumerals.romanToInt2("XIV") mustEqual 14
+  }
+  "return a string of 9 Roman numerals as an Int" in {
+    RomanNumerals.romanToInt2("MCMLXXXIV") mustEqual 1984
+  }
+  "return a string of 8 Roman numerals as an Int" in {
+    RomanNumerals.romanToInt2("LXXXVIII") mustEqual 88
+  }
 }
