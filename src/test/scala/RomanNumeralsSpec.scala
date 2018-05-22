@@ -26,7 +26,14 @@ class RomanNumeralsSpec extends WordSpec with MustMatchers {
   "return a list of Arabic nums when input is a String of 3 Roman Numerals" in {
     RomanNumerals.stringToListInt("III") mustEqual List(1,1,1)
   }
-//  "return a string of Roman numerals as an Int" in {
-//    RomanNumerals.toArabic("II") mustEqual 2
-//  }
+  "return a list of Arabic nums when input is a String of 3 different Roman Numerals" in {
+    RomanNumerals.stringToListInt("VII") mustEqual List(5,1,1)
+  }
+  "return a string of Roman numerals as an Int" in {
+    RomanNumerals.romanToInt("II") mustEqual 2
+  }
+  "return a string of Roman3 different numerals as an Int" in {
+    RomanNumerals.romanToInt("XVI") mustEqual 16
+  }
+
 }
